@@ -85,7 +85,7 @@ gcloud compute instances create "$NEW_VM_NAME" \
   --boot-disk-type="pd-balanced" \
   --boot-disk-device-name="$NEW_VM_NAME-disk" \
   --image="$NEW_IMAGE_NAME" \
-  --tags="innovehealth" \
+  --tags="network_tag" \
   --metadata=startup-script="#!/bin/bash
 sed -i 's/^#Port 22/Port $SSH_PORT/' /etc/ssh/sshd_config
 ufw allow $SSH_PORT/tcp
